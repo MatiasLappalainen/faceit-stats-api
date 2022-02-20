@@ -1,0 +1,30 @@
+{
+  "env": {
+    "browser": false,
+    "es6": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "es2021",
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "sourceMap": true,
+    "paths": {
+      "utils/*": ["utils/*"]
+    }
+  },
+  "rules": {
+    "import/no-unresolved": "error"
+  },
+  "plugins": ["prettier", "@typescript-eslint", "import"],
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
+}
