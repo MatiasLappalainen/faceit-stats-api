@@ -2,10 +2,8 @@ import cors from 'cors';
 import express from 'express';
 import { scheduler } from './utils/scheduler';
 import apiService from './routes';
-import { getMatches, initDatabase, sendDatabaseRequest } from './utils/database';
+import { initDatabase, sendDatabaseRequest } from './utils/database';
 import pinoHttp from 'pino-http';
-import { writeFileSync } from 'fs';
-import { useExampleData } from './routes/match';
 
 const startApi = async () => {
   const app = express();
