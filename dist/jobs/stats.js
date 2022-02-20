@@ -5,7 +5,7 @@ const database_1 = require("../utils/database");
 // Faceit player id, can be found from https://developers.faceit.com
 const playerId = process.env.PLAYER_ID;
 const fetchMatchStats = async (match) => {
-    const res = await (0, helpers_1.faceitApiClient)(`/matches/${match.match_id}/stats`);
+    const res = await helpers_1.faceitApiClient.matchStats(match.match_id);
     const json = await res.json();
     const players = json?.rounds?.[0].teams.flatMap((teams) => teams?.players);
     const player = players?.find((el) => el.player_id === playerId)?.player_stats;
@@ -25,7 +25,9 @@ const fetchMatchStats = async (match) => {
     };
 };
 const fetchMatches = async () => {
-    const res = await (0, helpers_1.faceitApiClient)(`/players/${playerId}/history?limit=250`);
+    if (!playerId)
+        throw Error('No player id provided');
+    const res = await helpers_1.faceitApiClient.playerMatchHistory(playerId, { limit: 250 });
     const { items } = await res.json();
     const matches = items.map((el) => ({
         match_id: el.match_id,
