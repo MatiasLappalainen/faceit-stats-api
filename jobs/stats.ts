@@ -1,5 +1,6 @@
 import { faceitApiClient, getErrorMessage } from '../utils/helpers';
 import { upsertMatches } from '../utils/database';
+import logger from '../utils/logger';
 
 // Faceit player id, can be found from https://developers.faceit.com
 const playerId = process.env.PLAYER_ID;
@@ -53,7 +54,7 @@ const handler = async () => {
     }
     await upsertMatches(stats);
   } catch (err) {
-    console.error(err);
+    logger.error(err);
   }
 };
 

@@ -41,7 +41,7 @@ export const initDatabase = async (db: Knex<any, unknown[]>) => {
       });
     }
   } catch (error) {
-    console.error(error);
+    logger.error(error);
   }
 };
 

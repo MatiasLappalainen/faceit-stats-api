@@ -3,6 +3,10 @@ import logger from '../utils/logger';
 import { getMatches } from '../utils/database';
 import { getErrorMessage } from '../utils/helpers';
 
+/**
+ * Function for using example data
+ * Functions should work exactly like getMatches function
+ */
 export const useExampleData = async ({
   matchId,
   limit,
