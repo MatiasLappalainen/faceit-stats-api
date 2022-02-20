@@ -44,10 +44,10 @@ With vscode debugger
 
 ## Env variables
 
-| Variable                | Value                                                                     |
-| ----------------------- | ------------------------------------------------------------------------- |
-| USE_EXAMPLE_DATA        | (Required if no database) To use system without database connection       |
-| DATABASE_CONNECTION_URL | (Required if no example data) PostgreSQL connection url                   |
-| PORT                    | (Optional) Start server in specific port, default: 4242                   |
-| PLAYER_ID               | (Required) Faceit playerId can be found from https://faceit.com           |
-| FACEIT_TOKEN            | (Required) Faceit api token can be found at https://developers.faceit.com |
+| Variable                | type    | Value                                                                     |
+| ----------------------- | ------- | ------------------------------------------------------------------------- |
+| USE_EXAMPLE_DATA        | boolean | (Required if no database) To use system without database connection       |
+| DATABASE_CONNECTION_URL | string  | (Required if no example data) PostgreSQL connection url                   |
+| PORT                    | number  | (Optional) Start server in specific port, default: 4242                   |
+| PLAYER_ID               | string  | (Required) Faceit playerId can be found from https://faceit.com           |
+| FACEIT_TOKEN            | string  | (Required) Faceit api token can be found at https://developers.faceit.com |
