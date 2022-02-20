@@ -1,7 +1,8 @@
 # Faceit stats api
 
-This is the api project for tracking personal faceit stats
-For the client go to: https://github.com/MatiasLappalainen/faceit-stats-client
+This is a project for tracking personal [faceit](https://faceit.com) stats.
+
+This is a repostory for the api and frontend can be found at: https://github.com/MatiasLappalainen/faceit-stats-client
 
 > Note this is still a work in progress
 
